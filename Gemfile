@@ -64,3 +64,5 @@ group :development do
   # gem "spring"
 end
 
+
+gem "mechanize", "~> 2.8"
