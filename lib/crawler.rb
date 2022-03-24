@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'mechanize'
 
 class Crawler
@@ -6,7 +8,7 @@ class Crawler
   def initialize
     @agent = Mechanize.new
   end
-  
+
   def crawl(url:, link_text:, sleep_seconds: 3)
     loop do
       fetch = agent.get(url)
