@@ -72,3 +72,5 @@ gem "rubocop", "~> 1.26", :require => false
 gem "rubocop-rails", "~> 2.14", :require => false
 
 gem "rubocop-performance", "~> 1.13", :require => false
+
+gem "nokogiri", "~> 1.13"
