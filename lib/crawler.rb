@@ -3,10 +3,11 @@
 require 'mechanize'
 
 class Crawler
-  attr_reader :agent
+  attr_reader :agent, :url_list
 
   def initialize
     @agent = Mechanize.new
+    @url_list = []
   end
 
   def crawl(url:, link_text:, sleep_seconds: 3)
@@ -17,8 +18,13 @@ class Crawler
       break if link.blank?
 
       url = link.click.uri
+      add_url_to_list(url)
 
       sleep sleep_seconds
     end
+  end
+
+  def add_url_to_list(url)
+    @url_list += [url]
   end
 end
