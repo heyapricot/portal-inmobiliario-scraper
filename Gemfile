@@ -66,3 +66,4 @@ end
 
 
 gem "mechanize", "~> 2.8"
+gem "rubocop", "~> 1.26", :require => false
