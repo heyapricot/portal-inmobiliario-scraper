@@ -14,7 +14,7 @@ class Crawler
       fetch = agent.get(url)
       link = fetch.link_with(text: link_text)
 
-      break unless link.present?
+      break if link.blank?
 
       url = link.click.uri
 
